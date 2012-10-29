@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23D5679B163EDF5000923BC8 /* RTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D5679A163EDF5000923BC8 /* RTViewController.xib */; };
+		23D567ED163EF25C00923BC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D567EB163EF24B00923BC8 /* CoreLocation.framework */; };
+		23D567F6163EFEEB00923BC8 /* PSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D567F5163EFEEB00923BC8 /* PSLocationManager.m */; };
 		23E59758163ECF0F00ACB790 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59757163ECF0F00ACB790 /* UIKit.framework */; };
 		23E5975A163ECF0F00ACB790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59759163ECF0F00ACB790 /* Foundation.framework */; };
 		23E5975C163ECF0F00ACB790 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E5975B163ECF0F00ACB790 /* CoreGraphics.framework */; };
@@ -17,12 +20,12 @@
 		23E5976C163ECF0F00ACB790 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E5976B163ECF0F00ACB790 /* Default@2x.png */; };
 		23E5976E163ECF0F00ACB790 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E5976D163ECF0F00ACB790 /* Default-568h@2x.png */; };
 		23E59771163ECF0F00ACB790 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E59770163ECF0F00ACB790 /* RTViewController.m */; };
-		23E59774163ECF0F00ACB790 /* RTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E59772163ECF0F00ACB790 /* RTViewController.xib */; };
 		23E5977C163ECF0F00ACB790 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E5977B163ECF0F00ACB790 /* SenTestingKit.framework */; };
 		23E5977D163ECF0F00ACB790 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59757163ECF0F00ACB790 /* UIKit.framework */; };
 		23E5977E163ECF0F00ACB790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59759163ECF0F00ACB790 /* Foundation.framework */; };
 		23E59786163ECF0F00ACB790 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E59784163ECF0F00ACB790 /* InfoPlist.strings */; };
 		23E59789163ECF0F00ACB790 /* MHRunTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E59788163ECF0F00ACB790 /* MHRunTrackerTests.m */; };
+		23E59794163ED1B600ACB790 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59792163ED1A700ACB790 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23D5679A163EDF5000923BC8 /* RTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RTViewController.xib; sourceTree = "<group>"; };
+		23D567EB163EF24B00923BC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23D567F4163EFEEB00923BC8 /* PSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLocationManager.h; sourceTree = "<group>"; };
+		23D567F5163EFEEB00923BC8 /* PSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSLocationManager.m; sourceTree = "<group>"; };
 		23E59753163ECF0F00ACB790 /* MHRunTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHRunTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E59757163ECF0F00ACB790 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23E59759163ECF0F00ACB790 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,13 +58,13 @@
 		23E5976D163ECF0F00ACB790 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		23E5976F163ECF0F00ACB790 /* RTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
 		23E59770163ECF0F00ACB790 /* RTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
-		23E59773163ECF0F00ACB790 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RTViewController.xib; sourceTree = "<group>"; };
 		23E5977A163ECF0F00ACB790 /* MHRunTrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHRunTrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E5977B163ECF0F00ACB790 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		23E59783163ECF0F00ACB790 /* MHRunTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHRunTrackerTests-Info.plist"; sourceTree = "<group>"; };
 		23E59785163ECF0F00ACB790 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E59787163ECF0F00ACB790 /* MHRunTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHRunTrackerTests.h; sourceTree = "<group>"; };
 		23E59788163ECF0F00ACB790 /* MHRunTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHRunTrackerTests.m; sourceTree = "<group>"; };
+		23E59792163ED1A700ACB790 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D567ED163EF25C00923BC8 /* CoreLocation.framework in Frameworks */,
+				23E59794163ED1B600ACB790 /* MapKit.framework in Frameworks */,
 				23E59758163ECF0F00ACB790 /* UIKit.framework in Frameworks */,
 				23E5975A163ECF0F00ACB790 /* Foundation.framework in Frameworks */,
 				23E5975C163ECF0F00ACB790 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +115,8 @@
 		23E59756163ECF0F00ACB790 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23D567EB163EF24B00923BC8 /* CoreLocation.framework */,
+				23E59792163ED1A700ACB790 /* MapKit.framework */,
 				23E59757163ECF0F00ACB790 /* UIKit.framework */,
 				23E59759163ECF0F00ACB790 /* Foundation.framework */,
 				23E5975B163ECF0F00ACB790 /* CoreGraphics.framework */,
@@ -117,11 +128,13 @@
 		23E5975D163ECF0F00ACB790 /* MHRunTracker */ = {
 			isa = PBXGroup;
 			children = (
+				23D567F4163EFEEB00923BC8 /* PSLocationManager.h */,
+				23D567F5163EFEEB00923BC8 /* PSLocationManager.m */,
 				23E59766163ECF0F00ACB790 /* RTAppDelegate.h */,
 				23E59767163ECF0F00ACB790 /* RTAppDelegate.m */,
 				23E5976F163ECF0F00ACB790 /* RTViewController.h */,
 				23E59770163ECF0F00ACB790 /* RTViewController.m */,
-				23E59772163ECF0F00ACB790 /* RTViewController.xib */,
+				23D5679A163EDF5000923BC8 /* RTViewController.xib */,
 				23E5975E163ECF0F00ACB790 /* Supporting Files */,
 			);
 			path = MHRunTracker;
@@ -236,7 +249,7 @@
 				23E5976A163ECF0F00ACB790 /* Default.png in Resources */,
 				23E5976C163ECF0F00ACB790 /* Default@2x.png in Resources */,
 				23E5976E163ECF0F00ACB790 /* Default-568h@2x.png in Resources */,
-				23E59774163ECF0F00ACB790 /* RTViewController.xib in Resources */,
+				23D5679B163EDF5000923BC8 /* RTViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +287,7 @@
 				23E59764163ECF0F00ACB790 /* main.m in Sources */,
 				23E59768163ECF0F00ACB790 /* RTAppDelegate.m in Sources */,
 				23E59771163ECF0F00ACB790 /* RTViewController.m in Sources */,
+				23D567F6163EFEEB00923BC8 /* PSLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +316,6 @@
 				23E59761163ECF0F00ACB790 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		23E59772163ECF0F00ACB790 /* RTViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23E59773163ECF0F00ACB790 /* en */,
-			);
-			name = RTViewController.xib;
 			sourceTree = "<group>";
 		};
 		23E59784163ECF0F00ACB790 /* InfoPlist.strings */ = {
@@ -379,6 +385,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHRunTracker/MHRunTracker-Prefix.pch";
 				INFOPLIST_FILE = "MHRunTracker/MHRunTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHRunTracker/MHRunTracker-Prefix.pch";
 				INFOPLIST_FILE = "MHRunTracker/MHRunTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -448,6 +456,7 @@
 				23E5978E163ECF0F00ACB790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23E5978F163ECF0F00ACB790 /* Build configuration list for PBXNativeTarget "MHRunTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +465,7 @@
 				23E59791163ECF0F00ACB790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

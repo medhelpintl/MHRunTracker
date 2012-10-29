@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSLocationManager.h"
 
-@interface RTViewController : UIViewController
-
+@interface RTViewController : UIViewController <PSLocationManagerDelegate>
+@property (nonatomic, strong) IBOutlet UIButton *infoButton;
+@property (nonatomic, strong) IBOutlet UILabel *totalDistanceLbl;
 @end
