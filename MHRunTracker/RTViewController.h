@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "PSLocationManager.h"
 
-@interface RTViewController : UIViewController <PSLocationManagerDelegate>
+@interface RTViewController : UIViewController <PSLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, strong) IBOutlet UIButton *infoButton;
 @property (nonatomic, strong) IBOutlet UILabel *totalDistanceLbl;
+@property (nonatomic, strong) IBOutlet MKMapView *mapView; 
+@property (nonatomic, strong) MKPolyline *routeLine; //your line
+@property (nonatomic, strong) MKPolylineView *routeLineView; //overlay view
 @end
