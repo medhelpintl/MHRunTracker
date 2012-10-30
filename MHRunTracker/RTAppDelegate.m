@@ -7,13 +7,43 @@
 //
 
 #import "RTAppDelegate.h"
-
+#import "MHUser.h"
+#import "MHHealthData.h"
 #import "RTViewController.h"
 
 @implementation RTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initialize RestKit
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURLString:@"http://localhost:3000"];
+    
+    // Enable automatic network activity indicator management
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+    
+    // Setup our object mappings
+    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[MHUser class]];
+    [userMapping mapKeyPath:@"id" toAttribute:@"userID"];
+    [userMapping mapKeyPath:@"screen_name" toAttribute:@"screenName"];
+    [userMapping mapAttributes:@"name", nil];
+    
+    RKObjectMapping *healthDataMapping = [RKObjectMapping mappingForClass:[MHHealthData class]];
+    [healthDataMapping mapKeyPathsToAttributes:@"id", @"healthDataID",
+     @"type", @"dataType",
+     @"value", @"value",
+     @"start_time", @"startTime",
+     @"end_time", @"endTime",
+     nil];
+    [healthDataMapping mapRelationship:@"user" withMapping:userMapping];
+    
+    
+    // Update date format so that we can parse dates properly
+    // Wed Sep 29 15:31:08 +0000 2010
+    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+    
+    // Register our mappings with the provider using a resource path pattern
+    [objectManager.mappingProvider setObjectMapping:healthDataMapping forResourcePathPattern:@"/health_data/:id_or_search"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[RTViewController alloc] initWithNibName:@"RTViewController" bundle:nil];

@@ -13,6 +13,7 @@
 @property (nonatomic, assign) MKMapRect routeRect;
 - (void)updateMapView;
 - (void)infoButtonSelected:(id)sender;
+- (void)loadHealthData;
 @end
 
 @implementation RTViewController
@@ -23,6 +24,7 @@
 @synthesize routeLine = routeLine_;
 @synthesize routeLineView = routeLineView_;
 @synthesize routeRect = routeRect_;
+@synthesize healthData = healthData_;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +39,7 @@
     [[PSLocationManager sharedLocationManager] startLocationUpdates];
     
     [self.infoButton addTarget:self action:@selector(infoButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [self loadHealthData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,7 +102,38 @@
 }
 
 #pragma mark
+#pragma mark 
+
+#pragma mark RKObjectLoaderDelegate methods
+
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+{
+    NSLog(@"Loaded payload: %@", [response bodyAsString]);
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+{
+    NSLog(@"Loaded healthData for a test: %@", objects);
+    self.healthData = objects;
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    NSLog(@"Hit error: %@", error);
+}
+
+
+#pragma mark
 #pragma mark Private
+
+- (void)loadHealthData
+{
+    // Load the object model via RestKit
+    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+    [objectManager loadObjectsAtResourcePath:@"/health_data/test" delegate:self];
+}
 
 - (void)infoButtonSelected:(id)sender
 {

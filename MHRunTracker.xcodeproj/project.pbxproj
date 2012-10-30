@@ -18,6 +18,8 @@
 		23D56819163F338B00923BC8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D56818163F338B00923BC8 /* libxml2.dylib */; };
 		23D5681B163F339800923BC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5681A163F339800923BC8 /* QuartzCore.framework */; };
 		23D5681C163F33B400923BC8 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D56803163F2F0700923BC8 /* libRestKit.a */; };
+		23D56854163F4DA800923BC8 /* MHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D56853163F4DA800923BC8 /* MHUser.m */; };
+		23D5685C163F4DC100923BC8 /* MHHealthData.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D5685B163F4DC100923BC8 /* MHHealthData.m */; };
 		23E59758163ECF0F00ACB790 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59757163ECF0F00ACB790 /* UIKit.framework */; };
 		23E5975A163ECF0F00ACB790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59759163ECF0F00ACB790 /* Foundation.framework */; };
 		23E5975C163ECF0F00ACB790 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E5975B163ECF0F00ACB790 /* CoreGraphics.framework */; };
@@ -101,6 +103,10 @@
 		23D56816163F338300923BC8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		23D56818163F338B00923BC8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		23D5681A163F339800923BC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		23D56852163F4DA800923BC8 /* MHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUser.h; sourceTree = "<group>"; };
+		23D56853163F4DA800923BC8 /* MHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUser.m; sourceTree = "<group>"; };
+		23D5685A163F4DC100923BC8 /* MHHealthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHHealthData.h; sourceTree = "<group>"; };
+		23D5685B163F4DC100923BC8 /* MHHealthData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHHealthData.m; sourceTree = "<group>"; };
 		23E59753163ECF0F00ACB790 /* MHRunTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHRunTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E59757163ECF0F00ACB790 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23E59759163ECF0F00ACB790 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +227,10 @@
 				23E5976F163ECF0F00ACB790 /* RTViewController.h */,
 				23E59770163ECF0F00ACB790 /* RTViewController.m */,
 				23D5679A163EDF5000923BC8 /* RTViewController.xib */,
+				23D56852163F4DA800923BC8 /* MHUser.h */,
+				23D56853163F4DA800923BC8 /* MHUser.m */,
+				23D5685A163F4DC100923BC8 /* MHHealthData.h */,
+				23D5685B163F4DC100923BC8 /* MHHealthData.m */,
 				23E5975E163ECF0F00ACB790 /* Supporting Files */,
 			);
 			path = MHRunTracker;
@@ -419,6 +429,8 @@
 				23E59768163ECF0F00ACB790 /* RTAppDelegate.m in Sources */,
 				23E59771163ECF0F00ACB790 /* RTViewController.m in Sources */,
 				23D567F6163EFEEB00923BC8 /* PSLocationManager.m in Sources */,
+				23D56854163F4DA800923BC8 /* MHUser.m in Sources */,
+				23D5685C163F4DC100923BC8 /* MHHealthData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
