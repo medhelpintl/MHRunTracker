@@ -10,11 +10,13 @@
 #import <MapKit/MapKit.h>
 #import "PSLocationManager.h"
 
-@interface RTViewController : UIViewController <PSLocationManagerDelegate, MKMapViewDelegate, RKObjectLoaderDelegate>
+@interface RTTrackerViewController : UIViewController <PSLocationManagerDelegate, MKMapViewDelegate, RKObjectLoaderDelegate>
 @property (nonatomic, strong) IBOutlet UIButton *infoButton;
 @property (nonatomic, strong) IBOutlet UILabel *totalDistanceLbl;
-@property (nonatomic, strong) IBOutlet MKMapView *mapView; 
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) IBOutlet UIButton *trackingBtn;
 @property (nonatomic, strong) MKPolyline *routeLine; //your line
 @property (nonatomic, strong) MKPolylineView *routeLineView; //overlay view
 @property (nonatomic, strong) NSArray *healthData;
+- (IBAction)trackingButtonSelected:(id)sender;
 @end

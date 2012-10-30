@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23D5679B163EDF5000923BC8 /* RTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D5679A163EDF5000923BC8 /* RTViewController.xib */; };
+		2344CECC163F881E0031C1CD /* RTRunHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2344CECA163F881E0031C1CD /* RTRunHistoryViewController.m */; };
+		2344CECD163F881E0031C1CD /* RTRunHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2344CECB163F881E0031C1CD /* RTRunHistoryViewController.xib */; };
+		23D5679B163EDF5000923BC8 /* RTTrackerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D5679A163EDF5000923BC8 /* RTTrackerViewController.xib */; };
 		23D567ED163EF25C00923BC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D567EB163EF24B00923BC8 /* CoreLocation.framework */; };
 		23D567F6163EFEEB00923BC8 /* PSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D567F5163EFEEB00923BC8 /* PSLocationManager.m */; };
 		23D5680F163F324900923BC8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5680E163F324900923BC8 /* CFNetwork.framework */; };
@@ -29,7 +31,7 @@
 		23E5976A163ECF0F00ACB790 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E59769163ECF0F00ACB790 /* Default.png */; };
 		23E5976C163ECF0F00ACB790 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E5976B163ECF0F00ACB790 /* Default@2x.png */; };
 		23E5976E163ECF0F00ACB790 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E5976D163ECF0F00ACB790 /* Default-568h@2x.png */; };
-		23E59771163ECF0F00ACB790 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E59770163ECF0F00ACB790 /* RTViewController.m */; };
+		23E59771163ECF0F00ACB790 /* RTTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E59770163ECF0F00ACB790 /* RTTrackerViewController.m */; };
 		23E5977C163ECF0F00ACB790 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E5977B163ECF0F00ACB790 /* SenTestingKit.framework */; };
 		23E5977D163ECF0F00ACB790 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59757163ECF0F00ACB790 /* UIKit.framework */; };
 		23E5977E163ECF0F00ACB790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E59759163ECF0F00ACB790 /* Foundation.framework */; };
@@ -91,7 +93,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23D5679A163EDF5000923BC8 /* RTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RTViewController.xib; sourceTree = "<group>"; };
+		2344CEC9163F881E0031C1CD /* RTRunHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRunHistoryViewController.h; sourceTree = "<group>"; };
+		2344CECA163F881E0031C1CD /* RTRunHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRunHistoryViewController.m; sourceTree = "<group>"; };
+		2344CECB163F881E0031C1CD /* RTRunHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RTRunHistoryViewController.xib; sourceTree = "<group>"; };
+		23D5679A163EDF5000923BC8 /* RTTrackerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RTTrackerViewController.xib; sourceTree = "<group>"; };
 		23D567EB163EF24B00923BC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23D567F4163EFEEB00923BC8 /* PSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLocationManager.h; sourceTree = "<group>"; };
 		23D567F5163EFEEB00923BC8 /* PSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSLocationManager.m; sourceTree = "<group>"; };
@@ -120,8 +125,8 @@
 		23E59769163ECF0F00ACB790 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		23E5976B163ECF0F00ACB790 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		23E5976D163ECF0F00ACB790 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		23E5976F163ECF0F00ACB790 /* RTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
-		23E59770163ECF0F00ACB790 /* RTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
+		23E5976F163ECF0F00ACB790 /* RTTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTTrackerViewController.h; sourceTree = "<group>"; };
+		23E59770163ECF0F00ACB790 /* RTTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTTrackerViewController.m; sourceTree = "<group>"; };
 		23E5977A163ECF0F00ACB790 /* MHRunTrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHRunTrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E5977B163ECF0F00ACB790 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		23E59783163ECF0F00ACB790 /* MHRunTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHRunTrackerTests-Info.plist"; sourceTree = "<group>"; };
@@ -224,9 +229,12 @@
 				23D567F5163EFEEB00923BC8 /* PSLocationManager.m */,
 				23E59766163ECF0F00ACB790 /* RTAppDelegate.h */,
 				23E59767163ECF0F00ACB790 /* RTAppDelegate.m */,
-				23E5976F163ECF0F00ACB790 /* RTViewController.h */,
-				23E59770163ECF0F00ACB790 /* RTViewController.m */,
-				23D5679A163EDF5000923BC8 /* RTViewController.xib */,
+				23E5976F163ECF0F00ACB790 /* RTTrackerViewController.h */,
+				23E59770163ECF0F00ACB790 /* RTTrackerViewController.m */,
+				23D5679A163EDF5000923BC8 /* RTTrackerViewController.xib */,
+				2344CEC9163F881E0031C1CD /* RTRunHistoryViewController.h */,
+				2344CECA163F881E0031C1CD /* RTRunHistoryViewController.m */,
+				2344CECB163F881E0031C1CD /* RTRunHistoryViewController.xib */,
 				23D56852163F4DA800923BC8 /* MHUser.h */,
 				23D56853163F4DA800923BC8 /* MHUser.m */,
 				23D5685A163F4DC100923BC8 /* MHHealthData.h */,
@@ -390,7 +398,8 @@
 				23E5976A163ECF0F00ACB790 /* Default.png in Resources */,
 				23E5976C163ECF0F00ACB790 /* Default@2x.png in Resources */,
 				23E5976E163ECF0F00ACB790 /* Default-568h@2x.png in Resources */,
-				23D5679B163EDF5000923BC8 /* RTViewController.xib in Resources */,
+				23D5679B163EDF5000923BC8 /* RTTrackerViewController.xib in Resources */,
+				2344CECD163F881E0031C1CD /* RTRunHistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +436,11 @@
 			files = (
 				23E59764163ECF0F00ACB790 /* main.m in Sources */,
 				23E59768163ECF0F00ACB790 /* RTAppDelegate.m in Sources */,
-				23E59771163ECF0F00ACB790 /* RTViewController.m in Sources */,
+				23E59771163ECF0F00ACB790 /* RTTrackerViewController.m in Sources */,
 				23D567F6163EFEEB00923BC8 /* PSLocationManager.m in Sources */,
 				23D56854163F4DA800923BC8 /* MHUser.m in Sources */,
 				23D5685C163F4DC100923BC8 /* MHHealthData.m in Sources */,
+				2344CECC163F881E0031C1CD /* RTRunHistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 #import "RTAppDelegate.h"
 #import "MHUser.h"
 #import "MHHealthData.h"
-#import "RTViewController.h"
+#import "RTTrackerViewController.h"
 
 @implementation RTAppDelegate
 
@@ -36,6 +36,8 @@
      nil];
     [healthDataMapping mapRelationship:@"user" withMapping:userMapping];
     
+    RKObjectMapping* healthDataSerializeMapping = [healthDataMapping inverseMapping];
+  	[objectManager.mappingProvider setSerializationMapping:healthDataSerializeMapping forClass:[MHHealthData class]];
     
     // Update date format so that we can parse dates properly
     // Wed Sep 29 15:31:08 +0000 2010
@@ -44,9 +46,16 @@
     // Register our mappings with the provider using a resource path pattern
     [objectManager.mappingProvider setObjectMapping:healthDataMapping forResourcePathPattern:@"/health_data/:id_or_search"];
     
+    // Grab the reference to the router from the manager
+    RKObjectRouter *router = [RKObjectManager sharedManager].router;
+    
+    // Define a default resource path for all unspecified HTTP verbs
+    [router routeClass:[MHHealthData class] toResourcePath:@"/health_data" forMethod:RKRequestMethodPOST];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[RTViewController alloc] initWithNibName:@"RTViewController" bundle:nil];
+    self.viewController = [[RTTrackerViewController alloc] initWithNibName:@"RTViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

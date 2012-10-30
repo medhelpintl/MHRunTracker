@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MHUser.h"
 
 @interface MHHealthData : NSObject
 @property (nonatomic, strong) NSString *healthDataID;
@@ -14,4 +15,5 @@
 @property (nonatomic, strong) NSString *value;
 @property (nonatomic, strong) NSString *startTime;
 @property (nonatomic, strong) NSString *endTime;
+@property (nonatomic, strong) MHUser *user;
 @end

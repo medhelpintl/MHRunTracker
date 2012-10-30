@@ -40,7 +40,7 @@
 					<object class="IBMKMapView" id="249919029">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{0, 78}, {320, 470}}</string>
+						<string key="NSFrame">{{0, 48}, {320, 500}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="653079746"/>
@@ -57,7 +57,7 @@
 							<object class="IBUIButton" id="1018363433">
 								<reference key="NSNextResponder" ref="1038719619"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{282, 30}, {18, 19}}</string>
+								<string key="NSFrame">{{282, 15}, {18, 19}}</string>
 								<reference key="NSSuperview" ref="1038719619"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="249919029"/>
@@ -93,7 +93,7 @@
 							<object class="IBUILabel" id="186360244">
 								<reference key="NSNextResponder" ref="1038719619"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 29}, {115, 21}}</string>
+								<string key="NSFrame">{{20, 14}, {115, 21}}</string>
 								<reference key="NSSuperview" ref="1038719619"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="184997474"/>
@@ -125,7 +125,7 @@
 							<object class="IBUILabel" id="184997474">
 								<reference key="NSNextResponder" ref="1038719619"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{143, 29}, {131, 21}}</string>
+								<string key="NSFrame">{{143, 14}, {131, 21}}</string>
 								<reference key="NSSuperview" ref="1038719619"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1018363433"/>
@@ -144,7 +144,7 @@
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 79}</string>
+						<string key="NSFrameSize">{320, 50}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="186360244"/>
@@ -212,27 +212,11 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="191373211"/>
-					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">totalDistanceLbl</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="184997474"/>
-					</object>
-					<int key="connectionID">315</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">infoButton</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="1018363433"/>
 					</object>
-					<int key="connectionID">316</int>
+					<int key="connectionID">321</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -240,7 +224,40 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="249919029"/>
 					</object>
-					<int key="connectionID">317</int>
+					<int key="connectionID">322</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">totalDistanceLbl</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="184997474"/>
+					</object>
+					<int key="connectionID">323</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">trackingBtn</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="653079746"/>
+					</object>
+					<int key="connectionID">324</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="191373211"/>
+					</object>
+					<int key="connectionID">325</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">trackingButtonSelected:</string>
+						<reference key="source" ref="653079746"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">326</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -255,9 +272,9 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="249919029"/>
 							<reference ref="1038719619"/>
 							<reference ref="653079746"/>
+							<reference ref="249919029"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -314,13 +331,14 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">RTViewController</string>
+				<string key="-1.CustomClassName">RTTrackerViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="272.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="284.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="0.0" key="284.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="292.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="297.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="302.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -330,17 +348,29 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">317</int>
+			<int key="maxID">326</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">RTViewController</string>
+					<string key="className">RTTrackerViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">trackingButtonSelected:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">trackingButtonSelected:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">trackingButtonSelected:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="infoButton">UIButton</string>
 						<string key="mapView">MKMapView</string>
 						<string key="totalDistanceLbl">UILabel</string>
+						<string key="trackingBtn">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="infoButton">
@@ -355,10 +385,14 @@
 							<string key="name">totalDistanceLbl</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="trackingBtn">
+							<string key="name">trackingBtn</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/RTViewController.h</string>
+						<string key="minorKey">./Classes/RTTrackerViewController.h</string>
 					</object>
 				</object>
 			</array>

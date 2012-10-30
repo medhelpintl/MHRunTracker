@@ -6,17 +6,21 @@
 //  Copyright (c) 2012 Winfred Raguini. All rights reserved.
 //
 
-#import "RTViewController.h"
+#import "RTTrackerViewController.h"
+#import "MHHealthData.h"
+#import "RTRunHistoryViewController.h"
 
-@interface RTViewController ()
+@interface RTTrackerViewController () {
+    BOOL currentlyTracking_;
+}
 @property (nonatomic, readwrite, strong) NSMutableArray *wayPointsArray;
 @property (nonatomic, assign) MKMapRect routeRect;
 - (void)updateMapView;
 - (void)infoButtonSelected:(id)sender;
-- (void)loadHealthData;
+- (void)postHealthData;
 @end
 
-@implementation RTViewController
+@implementation RTTrackerViewController
 @synthesize wayPointsArray = wayPointsArray_;
 @synthesize totalDistanceLbl = totalDistanceLbl_;
 @synthesize infoButton = infoButton_;
@@ -25,9 +29,11 @@
 @synthesize routeLineView = routeLineView_;
 @synthesize routeRect = routeRect_;
 @synthesize healthData = healthData_;
+@synthesize trackingBtn = trackingBtn_;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    currentlyTracking_ = NO;
     self.mapView.delegate = self;
     
     
@@ -39,7 +45,6 @@
     [[PSLocationManager sharedLocationManager] startLocationUpdates];
     
     [self.infoButton addTarget:self action:@selector(infoButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
-    [self loadHealthData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -128,16 +133,41 @@
 #pragma mark
 #pragma mark Private
 
-- (void)loadHealthData
+- (void)postHealthData
 {
-    // Load the object model via RestKit
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    [objectManager loadObjectsAtResourcePath:@"/health_data/test" delegate:self];
+    MHHealthData* healthData = [[MHHealthData alloc] init];
+    healthData.dataType = @"Running";
+    healthData.value = @"60";
+    healthData.startTime = @"Wed Sep 29 15:31:08 +0000 2010";
+    healthData.endTime = @"Wed Sep 29 15:31:08 +0000 2010";
+    
+    // POST to /health_data
+    [[RKObjectManager sharedManager] postObject:healthData delegate:self];
+}
+
+- (void)trackingButtonSelected:(id)sender
+{
+    currentlyTracking_ = !currentlyTracking_;
+    if (currentlyTracking_) {
+        [self.trackingBtn setTitle:@"Stop tracking" forState:UIControlStateNormal];
+    } else {
+        [self.trackingBtn setTitle:@"Start tracking" forState:UIControlStateNormal];
+        [self postHealthData];
+    }
 }
 
 - (void)infoButtonSelected:(id)sender
 {
     NSLog(@"infoButton was selected");
+    
+    RTRunHistoryViewController *historyController = [[RTRunHistoryViewController alloc] initWithNibName:@"RTRunHistoryViewController" bundle:nil];
+    
+    UINavigationController *historyNavController = [[UINavigationController alloc] initWithRootViewController:historyController];
+    
+    [historyNavController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:historyNavController animated:YES completion:^(void){
+        NSLog(@"presented view controller");
+    }];
 }
 
 - (void)updateMapView

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class RTViewController;
+@class RTTrackerViewController;
 
 @interface RTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) RTViewController *viewController;
+@property (strong, nonatomic) RTTrackerViewController *viewController;
 
 @end
